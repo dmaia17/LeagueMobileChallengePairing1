@@ -35,6 +35,11 @@ final class MainViewInteractor {
   
   private func getUsers(apiKey: String) {
     
+    provider?.getUsers(apiKey: apiKey, successCallback: { users in
+      print(users)
+    }, failureCallback: {
+      print("ERROR ON INTERACTOR")
+    })
   }
 }
 
