@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		51B4816628328D5F00257236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4816528328D5F00257236 /* AppDelegate.swift */; };
 		51B4816828328D5F00257236 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4816728328D5F00257236 /* SceneDelegate.swift */; };
-		51B4816A28328D5F00257236 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4816928328D5F00257236 /* ViewController.swift */; };
-		51B4816D28328D5F00257236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B4816B28328D5F00257236 /* Main.storyboard */; };
 		51B4816F28328D6700257236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B4816E28328D6700257236 /* Assets.xcassets */; };
 		51B4817228328D6700257236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B4817028328D6700257236 /* LaunchScreen.storyboard */; };
 		51B4817D28328D6800257236 /* LeagueMobileChallengePairingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4817C28328D6800257236 /* LeagueMobileChallengePairingTests.swift */; };
 		51B4818728328D6800257236 /* LeagueMobileChallengePairingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4818628328D6800257236 /* LeagueMobileChallengePairingUITests.swift */; };
 		51B4818928328D6800257236 /* LeagueMobileChallengePairingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4818828328D6800257236 /* LeagueMobileChallengePairingUITestsLaunchTests.swift */; };
+		51B4819F2832904D00257236 /* MainViewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481992832904D00257236 /* MainViewInterfaces.swift */; };
+		51B481A02832904D00257236 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4819A2832904D00257236 /* MainViewPresenter.swift */; };
+		51B481A12832904D00257236 /* MainViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4819B2832904D00257236 /* MainViewViewController.swift */; };
+		51B481A22832904D00257236 /* MainViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4819C2832904D00257236 /* MainViewInteractor.swift */; };
+		51B481A32832904D00257236 /* MainViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B4819D2832904D00257236 /* MainViewViewController.xib */; };
+		51B481A42832904D00257236 /* MainViewWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4819E2832904D00257236 /* MainViewWireframe.swift */; };
+		51B481AB2832911400257236 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481AA2832911400257236 /* ViewInterface.swift */; };
+		51B481AD2832913900257236 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481AC2832913900257236 /* PresenterInterface.swift */; };
+		51B481AF2832942E00257236 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481AE2832942D00257236 /* BaseWireframe.swift */; };
+		51B481B22832947A00257236 /* LMCUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481B12832947A00257236 /* LMCUINavigationController.swift */; };
+		51B481B42832954200257236 /* WhiteNavigationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481B32832954200257236 /* WhiteNavigationTheme.swift */; };
 		66D0802549D04CCB25CB7A6D /* Pods_LeagueMobileChallengePairing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24CDA2E058E24211159B79 /* Pods_LeagueMobileChallengePairing.framework */; };
 		9C1656E9FA154E30C708673A /* Pods_LeagueMobileChallengePairingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42163B4AE0248957DA35CA05 /* Pods_LeagueMobileChallengePairingTests.framework */; };
 		D386578158D7E0357C1CC007 /* Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554A618BCD0229A65666ADD4 /* Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework */; };
@@ -46,8 +55,6 @@
 		51B4816228328D5F00257236 /* LeagueMobileChallengePairing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeagueMobileChallengePairing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B4816528328D5F00257236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51B4816728328D5F00257236 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		51B4816928328D5F00257236 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		51B4816C28328D5F00257236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51B4816E28328D6700257236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51B4817128328D6700257236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51B4817328328D6700257236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +63,17 @@
 		51B4818228328D6800257236 /* LeagueMobileChallengePairingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeagueMobileChallengePairingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B4818628328D6800257236 /* LeagueMobileChallengePairingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueMobileChallengePairingUITests.swift; sourceTree = "<group>"; };
 		51B4818828328D6800257236 /* LeagueMobileChallengePairingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueMobileChallengePairingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51B481992832904D00257236 /* MainViewInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInterfaces.swift; sourceTree = "<group>"; };
+		51B4819A2832904D00257236 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		51B4819B2832904D00257236 /* MainViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewController.swift; sourceTree = "<group>"; };
+		51B4819C2832904D00257236 /* MainViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInteractor.swift; sourceTree = "<group>"; };
+		51B4819D2832904D00257236 /* MainViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewViewController.xib; sourceTree = "<group>"; };
+		51B4819E2832904D00257236 /* MainViewWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewWireframe.swift; sourceTree = "<group>"; };
+		51B481AA2832911400257236 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		51B481AC2832913900257236 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		51B481AE2832942D00257236 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		51B481B12832947A00257236 /* LMCUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMCUINavigationController.swift; sourceTree = "<group>"; };
+		51B481B32832954200257236 /* WhiteNavigationTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteNavigationTheme.swift; sourceTree = "<group>"; };
 		554A618BCD0229A65666ADD4 /* Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C271FBD01601C51D922BCCF /* Pods-LeagueMobileChallengePairing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueMobileChallengePairing.debug.xcconfig"; path = "Target Support Files/Pods-LeagueMobileChallengePairing/Pods-LeagueMobileChallengePairing.debug.xcconfig"; sourceTree = "<group>"; };
 		7C24CDA2E058E24211159B79 /* Pods_LeagueMobileChallengePairing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueMobileChallengePairing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +134,8 @@
 		51B4816428328D5F00257236 /* LeagueMobileChallengePairing */ = {
 			isa = PBXGroup;
 			children = (
+				51B481B02832945800257236 /* Components */,
+				51B481A52832909B00257236 /* Architecture */,
 				51B4819728328D9200257236 /* Configurations */,
 				51B4819528328D7F00257236 /* Resources */,
 				51B4819628328D8A00257236 /* ViewModules */,
@@ -152,8 +172,7 @@
 		51B4819628328D8A00257236 /* ViewModules */ = {
 			isa = PBXGroup;
 			children = (
-				51B4816928328D5F00257236 /* ViewController.swift */,
-				51B4816B28328D5F00257236 /* Main.storyboard */,
+				51B481982832903400257236 /* Main */,
 			);
 			path = ViewModules;
 			sourceTree = "<group>";
@@ -168,6 +187,38 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		51B481982832903400257236 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				51B481992832904D00257236 /* MainViewInterfaces.swift */,
+				51B4819A2832904D00257236 /* MainViewPresenter.swift */,
+				51B4819B2832904D00257236 /* MainViewViewController.swift */,
+				51B4819C2832904D00257236 /* MainViewInteractor.swift */,
+				51B4819D2832904D00257236 /* MainViewViewController.xib */,
+				51B4819E2832904D00257236 /* MainViewWireframe.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		51B481A52832909B00257236 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				51B481AA2832911400257236 /* ViewInterface.swift */,
+				51B481AC2832913900257236 /* PresenterInterface.swift */,
+				51B481AE2832942D00257236 /* BaseWireframe.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		51B481B02832945800257236 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				51B481B12832947A00257236 /* LMCUINavigationController.swift */,
+				51B481B32832954200257236 /* WhiteNavigationTheme.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		ABA987312E6947567A098933 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +229,6 @@
 				24095F73FA053FD15C9EB9E3 /* Pods-LeagueMobileChallengePairingTests.debug.xcconfig */,
 				1879E028E157D0A7301E4845 /* Pods-LeagueMobileChallengePairingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -303,7 +353,7 @@
 			files = (
 				51B4817228328D6700257236 /* LaunchScreen.storyboard in Resources */,
 				51B4816F28328D6700257236 /* Assets.xcassets in Resources */,
-				51B4816D28328D5F00257236 /* Main.storyboard in Resources */,
+				51B481A32832904D00257236 /* MainViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,9 +481,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51B4816A28328D5F00257236 /* ViewController.swift in Sources */,
+				51B481B22832947A00257236 /* LMCUINavigationController.swift in Sources */,
 				51B4816628328D5F00257236 /* AppDelegate.swift in Sources */,
+				51B481A02832904D00257236 /* MainViewPresenter.swift in Sources */,
+				51B481B42832954200257236 /* WhiteNavigationTheme.swift in Sources */,
 				51B4816828328D5F00257236 /* SceneDelegate.swift in Sources */,
+				51B481AD2832913900257236 /* PresenterInterface.swift in Sources */,
+				51B481AB2832911400257236 /* ViewInterface.swift in Sources */,
+				51B481A42832904D00257236 /* MainViewWireframe.swift in Sources */,
+				51B481A12832904D00257236 /* MainViewViewController.swift in Sources */,
+				51B481A22832904D00257236 /* MainViewInteractor.swift in Sources */,
+				51B4819F2832904D00257236 /* MainViewInterfaces.swift in Sources */,
+				51B481AF2832942E00257236 /* BaseWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,14 +529,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		51B4816B28328D5F00257236 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				51B4816C28328D5F00257236 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		51B4817028328D6700257236 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -618,7 +669,7 @@
 				INFOPLIST_FILE = LeagueMobileChallengePairing/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,7 +698,7 @@
 				INFOPLIST_FILE = LeagueMobileChallengePairing/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
