@@ -22,7 +22,8 @@ final class MainViewPresenter {
   private let wireframe: MainViewWireframeInterface
   
   let navTitle = Strings.title
-    
+  private var posts: [PostModel] = []
+  
   // MARK: - Lifecycle
 
   init(wireframe: MainViewWireframeInterface, view: MainViewViewInterface, interactor: MainViewInteractorProtocol) {
@@ -34,4 +35,35 @@ final class MainViewPresenter {
 
 // MARK: - Extensions
 
-extension MainViewPresenter: MainViewPresenterInterface { }
+extension MainViewPresenter: MainViewPresenterInterface {
+  func viewDidLoad() {
+    view?.fullScreenLoading(hide: false)
+    interactor.getPosts()
+  }
+  
+  func numberOfItens(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    posts.count
+  }
+  
+  func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.cellIdentifier, for: index) as? MainTableViewCell else {
+      return UITableViewCell()
+    }
+    
+    cell.setup(post: posts[index.row])
+    cell.selectionStyle = .none
+    return cell
+  }
+}
+
+extension MainViewPresenter: MainViewInteractorResponseProtocol {
+  func getPostsSuccess(list: [PostModel]) {
+    posts = list
+    view?.reloadTableView()
+    view?.fullScreenLoading(hide: true)
+  }
+  
+  func getPostsError() {
+    view?.fullScreenLoading(hide: true)
+  }
+}

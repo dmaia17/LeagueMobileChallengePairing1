@@ -25,6 +25,9 @@
 		51B481AF2832942E00257236 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481AE2832942D00257236 /* BaseWireframe.swift */; };
 		51B481B22832947A00257236 /* LMCUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481B12832947A00257236 /* LMCUINavigationController.swift */; };
 		51B481B42832954200257236 /* WhiteNavigationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481B32832954200257236 /* WhiteNavigationTheme.swift */; };
+		51B481B8283298A900257236 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481B6283298A900257236 /* MainTableViewCell.swift */; };
+		51B481B9283298A900257236 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B481B7283298A900257236 /* MainTableViewCell.xib */; };
+		51B481BD28329C6000257236 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481BC28329C6000257236 /* PostModel.swift */; };
 		66D0802549D04CCB25CB7A6D /* Pods_LeagueMobileChallengePairing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24CDA2E058E24211159B79 /* Pods_LeagueMobileChallengePairing.framework */; };
 		9C1656E9FA154E30C708673A /* Pods_LeagueMobileChallengePairingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42163B4AE0248957DA35CA05 /* Pods_LeagueMobileChallengePairingTests.framework */; };
 		D386578158D7E0357C1CC007 /* Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554A618BCD0229A65666ADD4 /* Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework */; };
@@ -74,6 +77,9 @@
 		51B481AE2832942D00257236 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		51B481B12832947A00257236 /* LMCUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMCUINavigationController.swift; sourceTree = "<group>"; };
 		51B481B32832954200257236 /* WhiteNavigationTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteNavigationTheme.swift; sourceTree = "<group>"; };
+		51B481B6283298A900257236 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		51B481B7283298A900257236 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		51B481BC28329C6000257236 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		554A618BCD0229A65666ADD4 /* Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C271FBD01601C51D922BCCF /* Pods-LeagueMobileChallengePairing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueMobileChallengePairing.debug.xcconfig"; path = "Target Support Files/Pods-LeagueMobileChallengePairing/Pods-LeagueMobileChallengePairing.debug.xcconfig"; sourceTree = "<group>"; };
 		7C24CDA2E058E24211159B79 /* Pods_LeagueMobileChallengePairing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueMobileChallengePairing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +140,8 @@
 		51B4816428328D5F00257236 /* LeagueMobileChallengePairing */ = {
 			isa = PBXGroup;
 			children = (
+				51B481BB28329C4700257236 /* API */,
+				51B481BA28329C3A00257236 /* Model */,
 				51B481B02832945800257236 /* Components */,
 				51B481A52832909B00257236 /* Architecture */,
 				51B4819728328D9200257236 /* Configurations */,
@@ -190,6 +198,7 @@
 		51B481982832903400257236 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				51B481B52832987C00257236 /* Cell */,
 				51B481992832904D00257236 /* MainViewInterfaces.swift */,
 				51B4819A2832904D00257236 /* MainViewPresenter.swift */,
 				51B4819B2832904D00257236 /* MainViewViewController.swift */,
@@ -217,6 +226,30 @@
 				51B481B32832954200257236 /* WhiteNavigationTheme.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		51B481B52832987C00257236 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				51B481B6283298A900257236 /* MainTableViewCell.swift */,
+				51B481B7283298A900257236 /* MainTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		51B481BA28329C3A00257236 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51B481BC28329C6000257236 /* PostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51B481BB28329C4700257236 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		ABA987312E6947567A098933 /* Pods */ = {
@@ -353,6 +386,7 @@
 			files = (
 				51B4817228328D6700257236 /* LaunchScreen.storyboard in Resources */,
 				51B4816F28328D6700257236 /* Assets.xcassets in Resources */,
+				51B481B9283298A900257236 /* MainTableViewCell.xib in Resources */,
 				51B481A32832904D00257236 /* MainViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,8 +515,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B481B8283298A900257236 /* MainTableViewCell.swift in Sources */,
 				51B481B22832947A00257236 /* LMCUINavigationController.swift in Sources */,
 				51B4816628328D5F00257236 /* AppDelegate.swift in Sources */,
+				51B481BD28329C6000257236 /* PostModel.swift in Sources */,
 				51B481A02832904D00257236 /* MainViewPresenter.swift in Sources */,
 				51B481B42832954200257236 /* WhiteNavigationTheme.swift in Sources */,
 				51B4816828328D5F00257236 /* SceneDelegate.swift in Sources */,

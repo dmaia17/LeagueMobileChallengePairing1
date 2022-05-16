@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewViewController" customModule="LeagueMobileChallengePairing" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="aBr-f6-dJn" id="nBd-PI-LN1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,13 +17,25 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="BSContentView" customModule="BS2UIKit">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemYellowColor"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aBr-f6-dJn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="aBr-f6-dJn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0ck-ap-ST6"/>
+                <constraint firstAttribute="trailing" secondItem="aBr-f6-dJn" secondAttribute="trailing" id="CEz-k7-Ls6"/>
+                <constraint firstItem="aBr-f6-dJn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Npp-Eb-VM6"/>
+                <constraint firstAttribute="bottom" secondItem="aBr-f6-dJn" secondAttribute="bottom" id="yd0-cb-nFn"/>
+            </constraints>
             <point key="canvasLocation" x="140" y="151.57421289355324"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

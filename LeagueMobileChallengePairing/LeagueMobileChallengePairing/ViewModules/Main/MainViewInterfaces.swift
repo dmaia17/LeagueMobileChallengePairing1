@@ -13,10 +13,23 @@ protocol MainViewWireframeInterface: AnyObject {
   func navigate(to option: MainViewNavigationOption)
 }
 
-protocol MainViewViewInterface: ViewInterface { }
+protocol MainViewViewInterface: ViewInterface {
+  func reloadTableView()
+}
 
 protocol MainViewPresenterInterface: PresenterInterface {
   var navTitle: String { get }
+  
+  ///TableView
+  func numberOfItens(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+  func cellForIndex(index: IndexPath, tableView:UITableView) -> UITableViewCell
 }
 
-protocol MainViewInteractorProtocol: AnyObject { }
+protocol MainViewInteractorProtocol: AnyObject {
+  func getPosts()
+}
+
+protocol MainViewInteractorResponseProtocol: AnyObject {
+  func getPostsSuccess(list: [PostModel])
+  func getPostsError()
+}

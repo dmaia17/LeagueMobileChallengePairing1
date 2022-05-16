@@ -8,10 +8,36 @@
 import Foundation
 
 final class MainViewInteractor {
+  
+  weak var delegate: MainViewInteractorResponseProtocol?
+  
+  private func createMock() -> [PostModel] {
+    var posts: [PostModel] = []
+    
+    var p1 = PostModel.init()
+    p1.icon = "http://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png"
+    p1.name = "Nome 1"
+    p1.title = "title 1"
+    p1.description = "description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 description1 "
+    
+    var p2 = PostModel.init()
+    p2.icon = "http://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png"
+    p2.name = "Nome 2"
+    p2.title = "title 2"
+    p2.description = "description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 description2 "
+    
+    posts.append(p1)
+    posts.append(p2)
+    
+    return posts
+  }
 }
 
 // MARK: - Extensions
 
 extension MainViewInteractor: MainViewInteractorProtocol {
+  func getPosts() {
+    delegate?.getPostsSuccess(list: createMock())
+  }
 }
 
