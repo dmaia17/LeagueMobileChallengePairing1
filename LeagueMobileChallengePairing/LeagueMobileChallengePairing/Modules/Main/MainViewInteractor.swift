@@ -10,6 +10,7 @@ import Foundation
 final class MainViewInteractor {
   
   weak var delegate: MainViewInteractorResponseProtocol?
+  var provider: LMCProviderProtocol?
   
   private func createMock() -> [PostModel] {
     var posts: [PostModel] = []
@@ -31,6 +32,10 @@ final class MainViewInteractor {
     
     return posts
   }
+  
+  private func getUsers(apiKey: String) {
+    
+  }
 }
 
 // MARK: - Extensions
@@ -38,6 +43,12 @@ final class MainViewInteractor {
 extension MainViewInteractor: MainViewInteractorProtocol {
   func getPosts() {
     delegate?.getPostsSuccess(list: createMock())
+    
+    provider?.getLogin(successCallback: { [weak self] login in
+      self?.getUsers(apiKey: login.api_key)
+    }, failureCallback: {
+      print("ERROR ON INTERACTOR")
+    })
   }
 }
 

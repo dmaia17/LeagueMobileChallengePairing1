@@ -19,6 +19,7 @@ final class MainViewWireframe: BaseWireframe {
     let interactor = MainViewInteractor()
     let presenter = MainViewPresenter(wireframe: self, view: viewController, interactor: interactor)
     
+    interactor.provider = LMCProvider()
     interactor.delegate = presenter
     viewController.presenter = presenter
   }
