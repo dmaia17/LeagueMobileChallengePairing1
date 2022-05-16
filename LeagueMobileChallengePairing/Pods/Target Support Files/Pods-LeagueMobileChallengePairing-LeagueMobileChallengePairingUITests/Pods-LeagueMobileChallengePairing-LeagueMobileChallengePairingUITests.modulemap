@@ -1,0 +1,6 @@
+framework module Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests {
+  umbrella header "Pods-LeagueMobileChallengePairing-LeagueMobileChallengePairingUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
