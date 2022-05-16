@@ -25,13 +25,7 @@ final class MainViewViewController: UIViewController, WhiteNavigationTheme {
     super.viewDidLoad()
     self.viewConfiguration()
   }
-  
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    tableView.layoutIfNeeded()
-    tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-  }
-  
+
   // MARK: - Class Configurations  
 
   private func viewConfiguration() {

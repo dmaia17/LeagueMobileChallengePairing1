@@ -39,10 +39,10 @@ extension LMCProvider: LMCProviderProtocol {
       .validate()
       .responseDecodable(of: LoginResponseModel.self) { response in
         guard let login = response.value else {
+          print(response)
           failureCallback()
           return
         }
-        print(login)
         successCallback(login)
       }
   }
@@ -52,10 +52,10 @@ extension LMCProvider: LMCProviderProtocol {
       .validate()
       .responseDecodable(of: [UserResponseModel].self) { response in
         guard let response = response.value else {
+          print(response)
           failureCallback()
           return
         }
-        print(response)
         successCallback(response)
       }
   }
@@ -65,10 +65,10 @@ extension LMCProvider: LMCProviderProtocol {
       .validate()
       .responseDecodable(of: [PostResponseModel].self) { response in
         guard let response = response.value else {
+          print(response)
           failureCallback()
           return
         }
-        print(response)
         successCallback(response)
       }
   }
