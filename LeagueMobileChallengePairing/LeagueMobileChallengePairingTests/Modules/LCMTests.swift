@@ -40,7 +40,9 @@ class LCMTests: XCTestCase {
     var user = UserResponseModel.init()
     
     provider.getUsers(apiKey: "", successCallback: { users in
-      user = users[0]
+      if !users.isEmpty {
+        user = users[0]
+      }
     }, failureCallback: {
       XCTFail("Failure - Couldn't get data")
     })
@@ -54,7 +56,9 @@ class LCMTests: XCTestCase {
     var post = PostResponseModel.init()
     
     provider.getPosts(apiKey: "", userId: 1, successCallback: { posts in
-      post = posts[0]
+      if !posts.isEmpty {
+        post = posts[0]
+      }
     }, failureCallback: {
       XCTFail("Failure - Couldn't get data")
     })

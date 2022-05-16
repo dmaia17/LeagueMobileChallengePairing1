@@ -10,14 +10,6 @@ import UIKit
 public protocol WhiteNavigationTheme: Themeable { }
 
 public extension WhiteNavigationTheme {
-  var iconBackButton: UIImage {
-    return UIImage.init(named: "") ?? UIImage()
-  }
-  
-  var iconRightButton: UIImage {
-    return UIImage.init(named: "") ?? UIImage()
-  }
-  
   var navigationBarBackgroundColor: UIColor {
     return .white
   }
@@ -36,14 +28,6 @@ public extension WhiteNavigationTheme {
   
   var navigationBarTranslucent: Bool {
     return false
-  }
-  
-  var customBackButtonAction: Selector? {
-    return nil
-  }
-  
-  var customRightButtonAction: Selector? {
-    return nil
   }
 }
 
