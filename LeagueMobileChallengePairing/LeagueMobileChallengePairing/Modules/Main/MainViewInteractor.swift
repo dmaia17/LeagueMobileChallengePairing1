@@ -35,8 +35,16 @@ final class MainViewInteractor {
   
   private func getUsers(apiKey: String) {
     
-    provider?.getUsers(apiKey: apiKey, successCallback: { users in
-      print(users)
+    provider?.getUsers(apiKey: apiKey, successCallback: { [weak self] users in
+      self?.getPosts(apiKey: apiKey, userId: users[0].id)
+    }, failureCallback: {
+      print("ERROR ON INTERACTOR")
+    })
+  }
+  
+  private func getPosts(apiKey: String, userId: Int) {
+    provider?.getPosts(apiKey: apiKey, userId: userId, successCallback: { posts in
+      print(posts)
     }, failureCallback: {
       print("ERROR ON INTERACTOR")
     })

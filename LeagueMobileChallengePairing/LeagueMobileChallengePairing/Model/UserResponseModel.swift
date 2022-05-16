@@ -8,6 +8,7 @@
 import Foundation
 
 struct UserResponseModel: Codable {
+  var id: Int = 0
   var avatar: AvatarModel = AvatarModel.init()
   var username: String = ""
   
@@ -16,6 +17,7 @@ struct UserResponseModel: Codable {
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     
+    self.id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
     self.avatar = try container.decodeIfPresent(AvatarModel.self, forKey: .avatar) ?? AvatarModel.init()
     self.username = try container.decodeIfPresent(String.self, forKey: .username) ?? ""
   }

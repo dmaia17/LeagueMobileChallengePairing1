@@ -19,10 +19,18 @@ protocol LMCProviderProtocol {
    * Type: GET
    */
   func getUsers(apiKey: String, successCallback: @escaping ([UserResponseModel]) -> Void, failureCallback: @escaping () -> Void)
+  
+  /**
+   * Endpoint: https://engineering.league.dev/challenge/api/posts
+   * Type: GET
+   */
+  func getPosts(apiKey: String, userId: Int, successCallback: @escaping ([PostResponseModel]) -> Void, failureCallback: @escaping () -> Void)
 }
 
 class LMCProvider {
-  
+  private func createHeader(apiKey: String) -> HTTPHeaders {
+    return ["x-access-token": apiKey]
+  }
 }
 
 extension LMCProvider: LMCProviderProtocol {
@@ -40,11 +48,22 @@ extension LMCProvider: LMCProviderProtocol {
   }
   
   func getUsers(apiKey: String, successCallback: @escaping ([UserResponseModel]) -> Void, failureCallback: @escaping () -> Void) {
-    let headers: HTTPHeaders = ["x-access-token": apiKey]
-    
-    AF.request("https://engineering.league.dev/challenge/api/users", headers: headers)
+    AF.request("https://engineering.league.dev/challenge/api/users", headers: createHeader(apiKey: apiKey))
       .validate()
       .responseDecodable(of: [UserResponseModel].self) { response in
+        guard let response = response.value else {
+          failureCallback()
+          return
+        }
+        print(response)
+        successCallback(response)
+      }
+  }
+  
+  func getPosts(apiKey: String, userId: Int, successCallback: @escaping ([PostResponseModel]) -> Void, failureCallback: @escaping () -> Void) {
+    AF.request("https://engineering.league.dev/challenge/api/posts?userId=\(userId)", headers: createHeader(apiKey: apiKey))
+      .validate()
+      .responseDecodable(of: [PostResponseModel].self) { response in
         guard let response = response.value else {
           failureCallback()
           return
