@@ -36,6 +36,8 @@
 		51B481D42832D0F800257236 /* LoginMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 51B481D32832D0F800257236 /* LoginMock.json */; };
 		51B481D62832D53B00257236 /* LCMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481D52832D53B00257236 /* LCMTests.swift */; };
 		51B481DA2832DAAB00257236 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B481D92832DAAB00257236 /* Decodable.swift */; };
+		51B481DC2832DEE900257236 /* UserMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 51B481DB2832DEE900257236 /* UserMock.json */; };
+		51B481DE2832DEF900257236 /* PostMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 51B481DD2832DEF900257236 /* PostMock.json */; };
 		66D0802549D04CCB25CB7A6D /* Pods_LeagueMobileChallengePairing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24CDA2E058E24211159B79 /* Pods_LeagueMobileChallengePairing.framework */; };
 		9C1656E9FA154E30C708673A /* Pods_LeagueMobileChallengePairingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42163B4AE0248957DA35CA05 /* Pods_LeagueMobileChallengePairingTests.framework */; };
 		D386578158D7E0357C1CC007 /* Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554A618BCD0229A65666ADD4 /* Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework */; };
@@ -96,6 +98,8 @@
 		51B481D32832D0F800257236 /* LoginMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginMock.json; sourceTree = "<group>"; };
 		51B481D52832D53B00257236 /* LCMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCMTests.swift; sourceTree = "<group>"; };
 		51B481D92832DAAB00257236 /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		51B481DB2832DEE900257236 /* UserMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserMock.json; sourceTree = "<group>"; };
+		51B481DD2832DEF900257236 /* PostMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PostMock.json; sourceTree = "<group>"; };
 		554A618BCD0229A65666ADD4 /* Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueMobileChallengePairing_LeagueMobileChallengePairingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C271FBD01601C51D922BCCF /* Pods-LeagueMobileChallengePairing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueMobileChallengePairing.debug.xcconfig"; path = "Target Support Files/Pods-LeagueMobileChallengePairing/Pods-LeagueMobileChallengePairing.debug.xcconfig"; sourceTree = "<group>"; };
 		7C24CDA2E058E24211159B79 /* Pods_LeagueMobileChallengePairing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueMobileChallengePairing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,6 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				51B481D32832D0F800257236 /* LoginMock.json */,
+				51B481DB2832DEE900257236 /* UserMock.json */,
+				51B481DD2832DEF900257236 /* PostMock.json */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -451,6 +457,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B481DC2832DEE900257236 /* UserMock.json in Resources */,
+				51B481DE2832DEF900257236 /* PostMock.json in Resources */,
 				51B481D42832D0F800257236 /* LoginMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

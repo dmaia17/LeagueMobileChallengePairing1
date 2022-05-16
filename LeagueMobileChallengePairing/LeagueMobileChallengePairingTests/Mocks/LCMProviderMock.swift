@@ -24,10 +24,18 @@ extension LCMProviderMock: LMCProviderProtocol {
   }
   
   func getUsers(apiKey: String, successCallback: @escaping ([UserResponseModel]) -> Void, failureCallback: @escaping () -> Void) {
-    
+    if let mock = mockSuccess, let parsedMock = mock as? [UserResponseModel] {
+      successCallback(parsedMock)
+    } else {
+      failureCallback()
+    }
   }
   
   func getPosts(apiKey: String, userId: Int, successCallback: @escaping ([PostResponseModel]) -> Void, failureCallback: @escaping () -> Void) {
-    
+    if let mock = mockSuccess, let parsedMock = mock as? [PostResponseModel] {
+      successCallback(parsedMock)
+    } else {
+      failureCallback()
+    }
   }
 }
